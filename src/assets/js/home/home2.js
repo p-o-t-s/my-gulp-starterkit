@@ -1,1 +1,1 @@
-console.log('home 2 js');
+console.log("home 2 js");

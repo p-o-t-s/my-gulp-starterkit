@@ -83,7 +83,7 @@ function jsESLint () {
 
 function jsESLintWatch () {
   watch(entry.src, series(
-    entry
+    jsESLint
   ));
 }
 
