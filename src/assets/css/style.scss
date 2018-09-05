@@ -1,0 +1,14 @@
+@import "variable";
+@import "foundation/**/*";
+
+.foo {
+  background-color: #fff;
+}
+
+.bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+}

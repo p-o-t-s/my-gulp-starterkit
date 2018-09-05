@@ -1,0 +1,69 @@
+{
+  "name": "pots-starterkit",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm install",
+    "build": "npm run build:css && npm run build:js",
+    "build:production": "npm run build:js:production",
+    "build:css": "gulp css --entry css",
+    "build:css:production": "NODE_ENV=production gulp css --entry css",
+    "build:js": "npm run build:js:app",
+    "build:js:production": "npm run eslint && npm run build:js:app:production",
+    "build:js:app": "gulp js --entry jsApp",
+    "build:js:app:production": "NODE_ENV=production gulp js --entry jsApp && NODE_ENV=production gulp jsMinify --entry jsApp",
+    "clean": "gulp clean --entry clean",
+    "eslint": "gulp jsESLint --entry assetsJS",
+    "eslint:fix": "eslint --fix ./src/**/*.js",
+    "watch:css": "gulp cssWatch --entry css",
+    "watch:eslint": "gulp jsESLintWatch --entry assetsJS",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "./src/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 11",
+    "Android >= 4.4"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.1.5",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.0",
+    "del": "^3.0.0",
+    "eslint": "^5.5.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "minimist": "^1.2.0",
+    "postcss-css-variables": "^0.9.0",
+    "prettier": "^1.14.2",
+    "sugarss": "^2.0.0",
+    "uglify-save-license": "^0.4.1"
+  },
+  "dependencies": {}
+}
