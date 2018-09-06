@@ -29,7 +29,7 @@ module.exports = {
     },
     cssWatch: {
       src: assetsSrcPath + '/css/**/*.scss',
-      dist: assetsDistPath
+      dist: assetsDistPathh + '/css'
     },
     jsHome: {
       src: assetsSrcPath + '/js/home.js',

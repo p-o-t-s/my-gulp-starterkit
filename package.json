@@ -18,7 +18,7 @@
     "format": " prettier --write ./src/**/*.*",
     "lint:js": "gulp jsESLint --entry assetsJS",
     "link:js:fix": "eslint --fix ./src/**/*.js",
-    "watch:css": "gulp cssWatch --entry css",
+    "watch:css": "gulp cssWatch --entry cssWatch",
     "watch:eslint": "gulp jsESLintWatch --entry assetsJS",
     "precommit": "lint-staged"
   },
